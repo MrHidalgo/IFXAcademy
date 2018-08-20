@@ -43,11 +43,10 @@ $(document).ready((ev) => {
    *
    */
   const parallaxAnimation = () => {
-    const parallaxImg = document.getElementById("main-img");
+    const parallaxImg = document.querySelector("#main-img .main-img-wrap");
 
     new Parallax(parallaxImg);
   };
-
 
 
   /**
@@ -56,11 +55,11 @@ $(document).ready((ev) => {
   const initJquery = () => {
     // ...
     initPreventBehavior();
-    initHeaderFixed();
+    // initHeaderFixed();
 
     // ...
     studyTabs();
-    parallaxAnimation();
+    // parallaxAnimation();
   };
   initJquery();
 });
