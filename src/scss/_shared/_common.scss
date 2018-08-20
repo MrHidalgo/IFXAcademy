@@ -1,5 +1,81 @@
 // COMMON :: START
 
+// BTN
+.nav {
+  &__list {
+    display: flex;
+
+
+    li {
+      margin-right: 36px;
+      @include respond(max-medium) {
+        margin-right: 25px;
+      }
+      @include respond(max-extra-small) {
+        margin-right: 18px;
+      }
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  &__link {
+    color: $c-white;
+    font-size: 16px;
+    font-weight: 600;
+    @include respond(max-small) {
+      font-size: 14px;
+    }
+  }
+
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 131px;
+    height: 40px;
+    margin-left: 30px;
+    border-radius: 3px;
+    background-color: $c-torchRed;
+    color: $c-white;
+    font-size: 16px;
+    font-weight: 600;
+    @include respond(max-small) {
+      font-size: 14px;
+    }
+    @include respond(max-extra-small) {
+      max-width: 115px;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+// LOGOTYPE
+.logotype {
+  &__img {
+    &--desktop {
+      display: none;
+      @include respond(medium) {
+        display: block;
+      }
+    }
+    &--mobile {
+      display: none;
+      @include respond(max-small) {
+        display: block;
+      }
+    }
+  }
+}
+
+
 // COPYIGHT
 .copyight {
   margin-right: 32px;
