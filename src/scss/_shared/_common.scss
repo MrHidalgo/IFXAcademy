@@ -27,8 +27,15 @@
     color: $c-white;
     font-size: 16px;
     font-weight: 600;
+    @include transition(color);
     @include respond(max-small) {
       font-size: 14px;
+    }
+
+
+    &:hover {
+      color: $c-torchRed;
+      @include transition(color);
     }
   }
 
@@ -42,16 +49,26 @@
     height: 40px;
     margin-left: 30px;
     border-radius: 3px;
+    border: 1px solid transparent;
     background-color: $c-torchRed;
     color: $c-white;
     font-size: 16px;
     font-weight: 600;
+    @include transition(color, border-color, background-color);
     @include respond(max-small) {
       font-size: 14px;
     }
     @include respond(max-extra-small) {
       max-width: 115px;
       margin-left: 10px;
+    }
+
+
+    &:hover {
+      border-color: rgba($c-black, 0.1);
+      background-color: $c-white;
+      color: $c-blackRussian;
+      @include transition(color, border-color, background-color);
     }
   }
 }
