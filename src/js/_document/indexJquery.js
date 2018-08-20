@@ -41,6 +41,9 @@ $(document).ready((ev) => {
   const initJquery = () => {
     // ...
     initPreventBehavior();
+    initHeaderFixed();
+
+    // ...
     studyTabs();
   };
   initJquery();
