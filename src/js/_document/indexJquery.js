@@ -55,11 +55,11 @@ $(document).ready((ev) => {
   const initJquery = () => {
     // ...
     initPreventBehavior();
-    // initHeaderFixed();
+    initHeaderFixed();
 
     // ...
     studyTabs();
-    // parallaxAnimation();
+    parallaxAnimation();
   };
   initJquery();
 });
