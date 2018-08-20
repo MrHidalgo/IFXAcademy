@@ -1,3 +1,77 @@
 // COMMON :: START
 
+// COPYIGHT
+.copyight {
+  margin-right: 32px;
+  color: $c-white;
+  font-size: 14px;
+  @include respond(max-small) {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+
+
+// SOCIAL
+.social {
+  margin-right: 30px;
+  @include respond(max-small) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+
+  &__list {
+    display: flex;
+    @include respond(max-small) {
+      justify-content: center;
+    }
+  }
+
+
+  &__item {
+    margin-left: 8px;
+    margin-right: 8px;
+
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: rgba($c-white, 0.1);
+
+
+    &-fb {
+      i {
+        @include retina-sprite($sp-i-fb-group);
+      }
+    }
+    &-yt {
+      i {
+        @include retina-sprite($sp-i-yt-group);
+      }
+    }
+    &-tw {
+      i {
+        @include retina-sprite($sp-i-tw-group);
+      }
+    }
+  }
+}
+
 // COMMON :: END

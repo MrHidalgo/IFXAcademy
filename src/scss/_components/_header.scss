@@ -1,5 +1,12 @@
 // HEADER :: START
 
-.header {}
+.header {
+  &__wrapper {
+    min-height: 1080px;
+    @include respond(max-small) {
+      max-height: 546px;
+    }
+  }
+}
 
 // HEADER :: END

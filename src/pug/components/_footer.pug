@@ -1,6 +1,51 @@
 // FOOTER :: START
 
+-
+  var socialArr = [
+    "fb",
+    "tw",
+    "yt"
+  ];
+
 footer#footer.footer
   .container
+    .footer__wrapper
+
+      .footer__row.footer__row-0
+        .footer__row-left
+
+
+          p.copyight!= "@ 2018. All rights reserved"
+
+
+          .footer__icon-wrap.footer__icon-wrap--0
+            i.footer__icon.footer__icon--secured
+
+
+          .footer__icon-wrap.footer__icon-wrap--1
+            i.footer__icon.footer__icon--services
+
+
+        .footer__row-right
+
+
+          .social
+            ul.social__list
+              each val, idx in socialArr
+                li.social__item
+                  a(
+                    href="#"
+                    title=""
+                    class="social__link social__link-" + val
+                  )
+                    i
+
+
+          .footer__icon-wrap.footer__icon-wrap--2
+            i.footer__icon.footer__icon--develop
+
+
+      .footer__row.footer__row-1
+        p.footer__text!= "IFX Academy (Pty) Ltd (Registration No. 2018|224842|07) is a provider of Forex Education. The information contained in any published learning material solely constitutes an education communication. It does not imply or suggest that it concerns investment advice or recommendations of any form, neither is it an offer of or entreaty for any financial transactions. The information supplied is not aligned with legal requirements endorsing the independence of investment research; furthermore, it is not subject to any prohibition on dealing ahead of the dissemination of investment research. Every opinion expressed is subject to change without prior notice, and opinions should be regarded as entirely those of the writer. These are not necessarily endorsed by IFX Academy. It is forbidden to reproduce or further disseminate the contents of this communication without the written prior consent of IFX Academy."
 
 // FOOTER :: END

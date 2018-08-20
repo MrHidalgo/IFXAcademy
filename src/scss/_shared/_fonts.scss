@@ -63,3 +63,9 @@
 /// @include mixinFontFace("SF-Pro-Text", "-Heavy", "../fonts/", 800, otf);
 ///
 /// ===============
+@include mixinFontFace("SFProText", "-Regular", "../fonts/", normal, ttf woff2 woff);
+@include mixinFontFace("SFProText", "-Light", "../fonts/", 200, ttf woff2 woff);
+@include mixinFontFace("SFProText", "-Medium", "../fonts/", 500, ttf woff2 woff);
+@include mixinFontFace("SFProText", "-Semibold", "../fonts/", 600, ttf woff2 woff);
+@include mixinFontFace("SFProText", "-Bold", "../fonts/", bold, ttf woff2 woff);
+@include mixinFontFace("SFProText", "-Heavy", "../fonts/", 900, ttf woff2 woff);
