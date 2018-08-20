@@ -18,6 +18,11 @@ $(document).ready((ev) => {
    * CALLBACK
    * =============================================
    */
+
+
+  /**
+   *
+   */
   const studyTabs = () => {
     $("[tabs-link-js]").on("click", (e) => {
       const elem = $(e.currentTarget),
@@ -34,6 +39,16 @@ $(document).ready((ev) => {
   };
 
 
+  /**
+   *
+   */
+  const parallaxAnimation = () => {
+    const parallaxImg = document.getElementById("main-img");
+
+    new Parallax(parallaxImg);
+  };
+
+
 
   /**
    * @description Init all method
@@ -45,6 +60,7 @@ $(document).ready((ev) => {
 
     // ...
     studyTabs();
+    parallaxAnimation();
   };
   initJquery();
 });

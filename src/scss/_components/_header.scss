@@ -2,7 +2,7 @@
 
 .header {
   @include respond(medium) {
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,6 +10,7 @@
     @include transition(background-color);
   }
   @include respond(max-small) {
+    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;

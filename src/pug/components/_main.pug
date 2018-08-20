@@ -1,7 +1,29 @@
 // HEADER :: START
 
-section#main.main
-  .container
+section#main
+  .main.main--bg
+
+    #main-img
+      div(
+        data-depth="0.25"
+        style="    background-image: url('./img/img-bg-main-layout@2x.png');background-repeat: no-repeat; background-position: right; background-size: contain;"
+      )
+
     .main__wrapper
+
+      h1.main__title!= "HELLO, <br>WALL STREET"
+      p.main__text!= "Complimentary education <br>available here"
+
+
+  .main.main--wbg
+    .main__box
+      .main__box-head
+        .main__box-left
+          p!= "SERIOUS ABOUT <br>MAKING MONEY?"
+        .main__box-right
+          p!= "SO ARE WE!"
+      .main__box-body
+        p!= "We’ll make you a successful Forex trader beyond your wildest dreams."
+
 
 // HEADER :: END
