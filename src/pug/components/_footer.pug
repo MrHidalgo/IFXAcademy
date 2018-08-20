@@ -2,9 +2,18 @@
 
 -
   var socialArr = [
-    "fb",
-    "tw",
-    "yt"
+  {
+    name: "fb",
+    link: "https://www.facebook.com/ifxbrokers/"
+  },
+  {
+    name: "yt",
+    link: "https://www.youtube.com/channel/UCxffJCxB4s3THLm9IPLZX2w/featured?view_as=subscriber"
+  },
+  {
+    name: "tw",
+    link: "https://twitter.com/IfxBrokers"
+  }
   ];
 
 footer#footer.footer
@@ -34,15 +43,21 @@ footer#footer.footer
               each val, idx in socialArr
                 li.social__item
                   a(
-                    href="#"
+                    href= socialArr[idx].link
                     title=""
-                    class="social__link social__link-" + val
+                    class="social__link social__link-" + socialArr[idx].name
                   )
                     i
 
 
           .footer__icon-wrap.footer__icon-wrap--2
-            i.footer__icon.footer__icon--develop
+            a(
+              href="http://olvy.team/"
+              title=""
+              class=""
+              target="_blank"
+            )!= ""
+              i.footer__icon.footer__icon--develop
 
 
       .footer__row.footer__row-1

@@ -95,9 +95,15 @@
         }
       }
       &--2 {
+        cursor: pointer;
         @include respond(max-small) {
           justify-content: center;
           width: 100%;
+        }
+
+
+        a {
+          display: flex;
         }
       }
     }
