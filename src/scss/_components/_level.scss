@@ -20,7 +20,7 @@
     height: 710px;
     background-color: #f30830;
     transform: skewY(27.4deg);
-    @include respond(max-wide-medium) {
+    @include respond(max-wide-small) {
       display: none;
     }
   }

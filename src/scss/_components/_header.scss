@@ -19,8 +19,7 @@
 
 
   &--fixed {
-    background-color: $c-blackRussian;
-    box-shadow: 0 0 10px 2px rgba($c-blackRussian, 0.15);
+    background-color: rgba($c-blackRussian, 0.9);
     @include transition(background-color);
 
     .header__wrapper {
