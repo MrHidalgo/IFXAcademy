@@ -1,26 +1,8 @@
 // HEADER :: START
 
-section#main
-  .main.main--bg
+section#main.main
 
-    #main-img
-      div.main-img.main-img-0(
-        style="background-image: url('./img/img-main-bg-0.jpg');background-repeat: no-repeat; background-position: center; background-size: cover;"
-      )
-      div.main-img.main-img-1(
-        style="background-image: url('./img/img-main-bg-1.png');background-repeat: no-repeat; background-position: right; background-size: contain;"
-      )
-      .main-img-wrap
-        div.main-img.main-img-2(
-          data-depth="0.035"
-          style="background-image: url('./img/img-bg-main-layout@2x.png');background-repeat: no-repeat; background-position: right; background-size: contain;"
-        )
-
-    .main__wrapper
-
-      h1.main__title!= "HELLO, <br>WALL STREET"
-      p.main__text!= "Complimentary education <br>available here"
-
+  include ../macros/_swiper
 
   .main.main--wbg
     .main__box

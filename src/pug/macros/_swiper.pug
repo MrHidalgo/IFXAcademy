@@ -1,23 +1,42 @@
 // SWIPER :: START
 
 //- Slider main container
-.swiper-container
+.swiper-container.main__swiper
 
   //- Additional required wrapper
   .swiper-wrapper
-    .swiper-slide!= 'Slide 1'
-    .swiper-slide!= 'Slide 2'
-    .swiper-slide!= 'Slide 3'
+    .swiper-slide.swiper-slide-0
+      .swiper-slide-wrapper
+        h1.main__title!= "HELLO, <br>WALL STREET"
+        p.main__text!= "Complimentary education <br>available here"
+
+      .swiper-slide-bg.swiper-slide-bg--0(
+        style="background-image: url('./img/img-main-bg-1.png');background-repeat: no-repeat; background-position: right; background-size: contain;"
+      )
+      #swiper-slide-bg.swiper-slide-bg.swiper-slide-bg--1
+        div(
+          data-depth="0.035"
+          style="background-image: url('./img/img-bg-main-layout@2x.png');background-repeat: no-repeat; background-position: right; background-size: contain;"
+        )
+
+
+    .swiper-slide.swiper-slide-1
+      .swiper-slide-wrapper
+        h1.main__title!= "WELCOME TO <br>IFX ACADEMY"
+        p.main__text!= "Your window to the world <br>of trading"
+
+    .swiper-slide.swiper-slide-2
+      .swiper-slide-wrapper
+        h1.main__title!= "HOW DO YOU ACCESS DECADES <br>OF EXPERIENCE AND KNOWLEDGE?"
+        p.main__text!= "Simple. You learn from the best."
 
   //- If we need pagination
   .swiper-pagination
 
   //- If we need navigation buttons
   .swiper-button-prev
+    i
   .swiper-button-next
-
-  //- If we need scrollbar
-  .swiper-scrollbar
-
+    i
 
 // SWIPER :: END

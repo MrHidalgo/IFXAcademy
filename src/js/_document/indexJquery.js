@@ -43,7 +43,7 @@ $(document).ready((ev) => {
    *
    */
   const parallaxAnimation = () => {
-    const parallaxImg = document.querySelector("#main-img .main-img-wrap");
+    const parallaxImg = document.querySelector("#swiper-slide-bg");
 
     new Parallax(parallaxImg);
   };
@@ -57,6 +57,7 @@ $(document).ready((ev) => {
     initPreventBehavior();
     initHeaderFixed();
     initHamburger();
+    initSwiper();
 
     // ...
     studyTabs();

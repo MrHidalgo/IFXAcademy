@@ -1,81 +1,36 @@
 // MAIN :: START
-
-#main {
-  position: relative;
-}
 .main {
-  &--bg {
-    position: relative;
-  }
-
-
-  &-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-
-    &-0 {
-      object-fit: cover;
-      object-position: center;
-    }
-
-
-    &-1 {
-      @include respond(max-small) {
-        background-position: -30px !important;
-      }
-    }
-
-
-    &-2 {
-      @include respond(max-small) {
-        background-position: -50px !important;
-      }
-    }
-
-
-    &-wrap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
+  position: relative;
 
 
   &--wbg {
+    z-index: 2;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    max-width: 1554px;
+    max-width: 760px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
     @include respond(max-small) {
       position: static;
       padding-left: 0;
       padding-right: 0;
     }
+    @media screen and (min-width: 1584px) {
+      max-width: 1554px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
 
-  &__wrapper {
+  &__swiper{
+    z-index: 1;
     position: relative;
     width: 100%;
-    max-width: 1554px;
     min-height: 1080px;
-    padding-top: 355px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
     @include respond(max-small) {
       min-height: 0;
       max-height: 546px;
@@ -84,12 +39,23 @@
 
 
   &__title {
+    z-index: 10;
+    position: relative;
     padding-bottom: 20px;
     line-height: 1;
     color: $c-white;
     font-size: 100px;
     font-weight: bold;
     font-family: "Rajdhani", sans-serif;
+    @include respond(max-extra-large) {
+      font-size: 90px;
+    }
+    @include respond(max-large) {
+      font-size: 80px;
+    }
+    @include respond(max-medium) {
+      font-size: 60px;
+    }
     @include respond(max-small) {
       text-align: center;
       font-size: 40px;
@@ -98,8 +64,16 @@
 
 
   &__text {
+    z-index: 10;
+    position: relative;
     color: $c-white;
     font-size: 32px;
+    @include respond(max-large) {
+      font-size: 26px;
+    }
+    @include respond(max-medium) {
+      font-size: 21px;
+    }
     @include respond(max-small) {
       padding-bottom: 37px;
       text-align: center;
@@ -113,6 +87,8 @@
 
 
   &__box {
+    z-index: 2;
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
