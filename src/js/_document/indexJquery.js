@@ -56,6 +56,7 @@ $(document).ready((ev) => {
     // ...
     initPreventBehavior();
     initHeaderFixed();
+    initHamburger();
 
     // ...
     studyTabs();

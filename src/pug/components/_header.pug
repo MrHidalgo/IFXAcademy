@@ -29,29 +29,33 @@ header#header.header
               title=""
              )
 
-
-      .header__row.header__row-1
-        .nav
-          ul.nav__list
-            each val, idx in navItem
-              li.nav__item
-                a.nav__link(
-                href="#"
-                title=""
-                class=""
-                )!= val
+      .header__row.header__row-3
+        include ../macros/_hamburger
 
 
-      .header__row.header__row-2
-        a(
-          href=""
-          title=""
-          class="nav__link"
-        )!= "Sign in"
-        a(
-          href=""
-          title=""
-          class="nav__btn btn"
-        )!= "Get Started"
+      .header__row-mobile
+        .header__row.header__row-1
+          .nav
+            ul.nav__list
+              each val, idx in navItem
+                li.nav__item
+                  a.nav__link(
+                    href="#"
+                    title=""
+                    class=""
+                  )!= val
+
+
+        .header__row.header__row-2
+          a(
+            href=""
+            title=""
+            class="nav__link"
+          )!= "Sign in"
+          a(
+            href=""
+            title=""
+            class="nav__btn btn"
+          )!= "Get Started"
 
 // HEADER :: END

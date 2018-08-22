@@ -2,8 +2,19 @@
 
 // BTN
 .nav {
+  @include respond(max-small) {
+    width: 100%;
+  }
+
+
   &__list {
     display: flex;
+    @include respond(max-small) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
 
 
     li {
@@ -14,10 +25,19 @@
       @include respond(max-extra-small) {
         margin-right: 18px;
       }
+      @include respond(max-small) {
+        width: 100%;
+        max-width: 170px;
+        margin-right: 0;
+        border-bottom: 1px solid rgba($c-white, 0.2);
+      }
 
 
       &:last-child {
         margin-right: 0;
+        @include respond(max-small) {
+          border-bottom: none;
+        }
       }
     }
   }
@@ -28,8 +48,16 @@
     font-size: 16px;
     font-weight: 600;
     @include transition(color);
+    @include respond(max-medium) {
+      font-size: 15px;
+    }
     @include respond(max-small) {
-      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 57px;
+      font-size: 18px;
     }
 
 
@@ -55,12 +83,14 @@
     font-size: 16px;
     font-weight: 600;
     @include transition(background-color);
-    @include respond(max-small) {
-      font-size: 14px;
+    @include respond(max-medium) {
+      font-size: 15px;
     }
-    @include respond(max-extra-small) {
-      max-width: 115px;
-      margin-left: 10px;
+    @include respond(max-small) {
+      max-width: 100%;
+      margin-top: 10px;
+      margin-left: 0;
+      font-size: 14px;
     }
 
 
