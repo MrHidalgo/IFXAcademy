@@ -144,14 +144,12 @@
       color: $c-white;
       font-size: 18px;
       font-weight: bold;
-      @include transition(color, border-color, background-color);
+      @include transition(background-color);
 
 
       &:hover {
-        border-color: rgba($c-black, 0.1);
-        background-color: $c-white;
-        color: $c-blackRussian;
-        @include transition(color, border-color, background-color);
+        background-color: $c-alizarin;
+        @include transition(background-color);
       }
     }
   }
