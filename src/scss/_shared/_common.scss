@@ -146,14 +146,12 @@
     border-radius: 100%;
     border: 1px solid transparent;
     background-color: rgba($c-white, 0.1);
-    @include transition(border-color, background-color, box-shadow);
+    @include transition(background-color);
 
 
     &:hover {
-      border-color: rgba($c-white, 0.4);
-      background-color: rgba($c-white, 0);
-      box-shadow: 0 0 5px 1px rgba($c-white, 0.05);
-      @include transition(border-color, background-color, box-shadow);
+      background-color: rgba($c-white, 0.2);
+      @include transition(background-color);
     }
 
 

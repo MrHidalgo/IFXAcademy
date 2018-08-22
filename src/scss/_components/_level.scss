@@ -449,6 +449,8 @@
 
   &__box {
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
     width: 100%;
     max-width: 359px;
     height: 203px;
@@ -483,6 +485,14 @@
 
     &-0 {
       background: rgba($c-torchRed, 0.1);
+      @include transition(background);
+
+
+      &:hover {
+        background-color: rgba($c-sangria, 0.1);
+        @include transition(background);
+      }
+
 
       i {
         @include retina-sprite($sp-i-beginner-group);
@@ -491,8 +501,18 @@
         color: $c-torchRed;
       }
     }
+
+
     &-1 {
       background-color: rgba($c-jewel, 0.1);
+      @include transition(background);
+
+
+      &:hover {
+        background-color: rgba($c-jewel, 0.15);
+        @include transition(background);
+      }
+
 
       i {
         @include retina-sprite($sp-i-intermediate-group);
@@ -501,8 +521,18 @@
         color: $c-jewel;
       }
     }
+
+
     &-2 {
       background-color: rgba($c-navyBlue, 0.1);
+      @include transition(background);
+
+
+      &:hover {
+        background-color: rgba($c-navyBlue, 0.15);
+        @include transition(background);
+      }
+
 
       i {
         @include retina-sprite($sp-i-advanced-group);

@@ -116,7 +116,15 @@
       @include retina-sprite($sp-i-cloudbric-group);
     }
     &--develop {
+      opacity: 0.5;
       @include retina-sprite($sp-i-design-develop-group);
+      @include transition(opacity);
+
+
+      &:hover {
+        opacity: 0.7;
+        @include transition(opacity);
+      }
     }
   }
 }
