@@ -121,6 +121,7 @@
 
 
       &--right {
+        overflow: hidden;
         width: 100%;
         max-width: calc(100% - 460px);
         padding: 30px;
@@ -364,19 +365,63 @@
       color: $c-white;
       font-size: 18px;
       font-weight: bold;
+      @include transition(background-color);
 
 
       .module__section-body--0 & {
         background-color: $c-torchRed;
+
+
+        &:hover {
+          background-color: rgba($c-torchRed, 0.9);
+          @include transition(background-color);
+        }
       }
+
+
       .module__section-body--1 & {
         background-color: $c-jewel;
+
+
+        &:hover {
+          background-color: rgba($c-jewel, 0.9);
+        }
       }
+
+
       .module__section-body--2 & {
         background-color: $c-navyBlue;
+
+
+        &:hover {
+          background-color: rgba($c-navyBlue, 0.9);
+        }
       }
     }
   }
+}
+
+@keyframes flipCustom {
+  from {
+    transform: perspective(1160px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -180deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(1160px) scale3d(0.975, 0.975, 0.975) translate3d(0, 0, 50px) rotate3d(0, 1, 0, -0deg);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(1160px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+}
+
+.animated.flipCustom {
+  backface-visibility: visible;
+  animation-duration: 0.85s;
+  animation-name: flipCustom;
 }
 
 // MODULE :: END

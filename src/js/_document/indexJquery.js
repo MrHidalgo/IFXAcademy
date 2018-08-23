@@ -62,8 +62,10 @@ $(document).ready((ev) => {
       $("[module-btn-js]").removeClass("is-active");
       elem.addClass("is-active");
 
-      $(".module__section-body > div").removeClass("is-active");
-      $("[data-module-body=" + elemId + "]").addClass("is-active");
+      $(".module__section-body > div").removeClass("is-active flipCustom");
+      $("[data-module-body=" + elemId + "]").addClass("is-active animated flipCustom");
+
+      $(".module__section-content").removeClass("animated slideInLeft slideInRight");
     });
     $(".module__section-btn a").on("click", (e) => {
       const elem = $(e.currentTarget),
@@ -77,8 +79,8 @@ $(document).ready((ev) => {
         parentLinkContainer.find(".module__section-btn a").removeClass("is-active");
         elem.addClass("is-active");
 
-        parentContentContainer.find(".module__section-content").removeClass('is-active');
-        parentContentContainer.find("[data-module-section-content-id=" + elemId + "]").addClass("is-active");
+        parentContentContainer.find(".module__section-content").removeClass('is-active slideInRight');
+        parentContentContainer.find("[data-module-section-content-id=" + elemId + "]").addClass("is-active animated slideInLeft");
       } else {
         const parentLinkContainer = elem.closest(".module__section-body--right"),
           parentContentContainer = elem.closest(".module__section-body--"  + elemIdParent);
@@ -109,6 +111,10 @@ $(document).ready((ev) => {
       if(scrollVal < 451) {
         transitionContainer.css(
           "transform" , "translateY(-" + offsetVal + "px)"
+        );
+      } else {
+        transitionContainer.css(
+          "transform" , "translateY(0px)"
         );
       }
     });
