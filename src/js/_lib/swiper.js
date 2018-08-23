@@ -19,11 +19,11 @@ function initSwiper() {
     effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
     slidesPerView: 1,
     spaceBetween: 0,
-    // touchMoveStopPropagation:false,
-    // simulateTouch : false,
-    // allowSwipeToNext: true,
-    // allowSwipeToPrev: true,
-    // allowPageScroll: "auto ",
+    touchMoveStopPropagation:false,
+    simulateTouch : false,
+    allowSwipeToNext: true,
+    allowSwipeToPrev: true,
+    allowPageScroll: "auto ",
 
     // If we need pagination
     pagination: {
