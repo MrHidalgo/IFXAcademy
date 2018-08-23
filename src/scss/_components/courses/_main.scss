@@ -1,9 +1,54 @@
 // MAIN COURSES :: START
 
 .mainc {
-  .container {}
   &__wrapper {
     min-height: 1080px;
+    padding-top: 185px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: url(../img/img-bg-courses.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include respond(max-small) {
+      padding-top: 120px;
+      min-height: 846px;
+    }
+  }
+
+
+  &__title {
+    padding-bottom: 26px;
+    line-height: 1;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: "Rajdhani", sans-serif;
+    @include respond(max-extra-large) {
+      font-size: 90px;
+    }
+    @include respond(max-large) {
+      font-size: 80px;
+    }
+    @include respond(max-medium) {
+      font-size: 60px;
+    }
+    @include respond(max-small) {
+      font-size: 40px;
+    }
+  }
+
+
+  &__text {
+    width: 100%;
+    max-width: 656px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 22px;
+    @include respond(max-small) {
+      font-size: 18px;
+    }
   }
 }
 
