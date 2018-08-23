@@ -68,15 +68,30 @@ $(document).ready((ev) => {
     $(".module__section-btn a").on("click", (e) => {
       const elem = $(e.currentTarget),
         elemId = elem.data("module-section-btn-id"),
-        elemIdParent = elem.data("parent"),
-        parentLinkContainer = elem.closest(".module__section-body--left"),
-        parentContentContainer = elem.closest(".module__section-body--"  + elemIdParent);
+        elemIdParent = elem.data("parent");
 
-      parentLinkContainer.find(".module__section-btn a").removeClass("is-active");
-      elem.addClass("is-active");
+      if(_window.width() > 767) {
+        const parentLinkContainer = elem.closest(".module__section-body--left"),
+          parentContentContainer = elem.closest(".module__section-body--"  + elemIdParent);
 
-      parentContentContainer.find(".module__section-content").removeClass('is-active');
-      parentContentContainer.find("[data-module-section-content-id=" + elemId + "]").addClass("is-active");
+        parentLinkContainer.find(".module__section-btn a").removeClass("is-active");
+        elem.addClass("is-active");
+
+        parentContentContainer.find(".module__section-content").removeClass('is-active');
+        parentContentContainer.find("[data-module-section-content-id=" + elemId + "]").addClass("is-active");
+      } else {
+        const parentLinkContainer = elem.closest(".module__section-body--right"),
+          parentContentContainer = elem.closest(".module__section-body--"  + elemIdParent);
+
+        if(elem.hasClass("is-active")) {
+          elem.removeClass("is-active");
+          parentContentContainer.find("[data-module-section-content-id=" + elemId + "]").slideUp(300);
+        } else {
+          elem.addClass("is-active");
+
+          parentContentContainer.find("[data-module-section-content-id=" + elemId + "]").slideDown(300);
+        }
+      }
     });
   };
 

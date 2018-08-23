@@ -10,6 +10,10 @@
     min-height: 100vh;
     padding-top: 220px;
     padding-bottom: 128px;
+    @include respond(max-small) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
 
 
 
@@ -22,14 +26,25 @@
       margin-left: auto;
       margin-right: auto;
       padding-bottom: 53px;
+      @include respond(max-small) {
+        display: none;
+      }
 
 
       a {
+        padding-left: 10px;
+        padding-right: 10px;
         color: $c-black;
         font-size: 50px;
         font-weight: bold;
         font-family: "Rajdhani", sans-serif;
         @include transition(color);
+        @include respond(max-large) {
+          font-size: 44px;
+        }
+        @include respond(max-medium) {
+          font-size: 38px;
+        }
 
 
         &.is-active {
@@ -65,6 +80,11 @@
         border-radius: 4px;
         background-color: $c-whiteSmoke;
         box-shadow: 0 4px 30px 0 rgba($c-black, 0.1);
+        @include respond(max-small) {
+          display: flex;
+          box-shadow: none;
+          background-color: $c-white;
+        }
 
 
         &.is-active {
@@ -81,6 +101,15 @@
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
         background-color: $c-blackRussian;
+        @include respond(max-large) {
+          width: 400px;
+        }
+        @include respond(max-medium) {
+          width: 350px;
+        }
+        @include respond(max-small) {
+          display: none;
+        }
       }
 
 
@@ -88,6 +117,48 @@
         width: 100%;
         max-width: calc(100% - 460px);
         padding: 30px;
+        @include respond(max-large) {
+          max-width: calc(100% - 400px);
+        }
+        @include respond(max-medium) {
+          max-width: calc(100% - 350px);
+        }
+        @include respond(max-small) {
+          max-width: 100%;
+          padding: 0 30px;
+        }
+        @include respond(max-extra-small) {
+          padding: 0 15px;
+        }
+
+
+        .module__section-btn {
+          @include respond(medium) {
+            display: none;
+          }
+        }
+        h1 {
+          padding-top: 30px;
+          padding-bottom: 30px;
+          color: $c-black;
+          font-size: 38px;
+          font-weight: bold;
+          font-family: "Rajdhani", sans-serif;
+          @include respond(medium) {
+            display: none;
+          }
+
+
+          .module__section-body--0 & {
+            color: $c-torchRed;
+          }
+          .module__section-body--1 & {
+            color: $c-jewel;
+          }
+          .module__section-body--2 & {
+            color: $c-navyBlue;
+          }
+        }
       }
     }
 
@@ -96,6 +167,9 @@
       overflow-y: auto;
       display: flex;
       flex-direction: column;
+      @include respond(max-small) {
+        background-color: $c-blackRussian;
+      }
 
 
       a {
@@ -108,10 +182,18 @@
         border-radius: 4px;
         box-shadow: inset 0 -1px 0 0 rgba($c-white, 0.1);
         @include transition(background-color);
+        @include respond(max-extra-small) {
+          height: 83px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
 
 
         &:last-child {
           box-shadow: none;
+          @include respond(max-small) {
+            box-shadow: inset 0 -1px 0 0 rgba($c-white, 0.1);
+          }
         }
 
 
@@ -153,6 +235,9 @@
         > div {
           &:first-child {
             width: 65px;
+            @include respond(max-extra-small) {
+              width: 55px;
+            }
 
 
             span {
@@ -165,12 +250,20 @@
               border-radius: 100%;
               background-color: rgba($c-grey, 0.5);
               @include transition(background-color);
+              @include respond(max-extra-small) {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+              }
             }
           }
 
 
           &:last-child {
             width: calc(100% - 65px);
+            @include respond(max-extra-small) {
+              width: calc(100% - 55px);
+            }
 
 
             p {
@@ -182,6 +275,9 @@
                 text-transform: uppercase;
                 font-size: 12px;
                 font-weight: 500;
+                @include respond(max-extra-small) {
+                  font-size: 10px;
+                }
               }
 
 
@@ -189,6 +285,9 @@
                 font-size: 22px;
                 font-weight: bold;
                 font-family: "Rajdhani", sans-serif;
+                @include respond(max-extra-small) {
+                  font-size: 18px;
+                }
               }
             }
           }
@@ -206,10 +305,19 @@
       border-radius: 4px;
       background-color: $c-white;
       box-shadow: 0 1px 3px 0 rgba($c-black, 0.1);
+      @include respond(max-small) {
+        height: auto;
+      }
+      @include respond(max-extra-small) {
+        padding: 30px 15px;
+      }
 
 
       &.is-active {
         display: block;
+        @include respond(max-small) {
+          display: none;
+        }
       }
     }
 
