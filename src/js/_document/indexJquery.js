@@ -45,8 +45,41 @@ $(document).ready((ev) => {
   const parallaxAnimation = () => {
     const parallaxImg = document.querySelector("#swiper-slide-bg");
 
-    new Parallax(parallaxImg);
+    if(parallaxImg) {
+      new Parallax(parallaxImg);
+    }
   };
+
+
+  /**
+   *
+   */
+  const moduleBtn = () => {
+    $("[module-btn-js]").on("click", (e) => {
+      const elem = $(e.currentTarget),
+        elemId = elem.data("module-id");
+
+      $("[module-btn-js]").removeClass("is-active");
+      elem.addClass("is-active");
+
+      $(".module__section-body > div").removeClass("is-active");
+      $("[data-module-body=" + elemId + "]").addClass("is-active");
+    });
+    $(".module__section-btn a").on("click", (e) => {
+      const elem = $(e.currentTarget),
+        elemId = elem.data("module-section-btn-id"),
+        elemIdParent = elem.data("parent"),
+        parentLinkContainer = elem.closest(".module__section-body--left"),
+        parentContentContainer = elem.closest(".module__section-body--"  + elemIdParent);
+
+      parentLinkContainer.find(".module__section-btn a").removeClass("is-active");
+      elem.addClass("is-active");
+
+      parentContentContainer.find(".module__section-content").removeClass('is-active');
+      parentContentContainer.find("[data-module-section-content-id=" + elemId + "]").addClass("is-active");
+    });
+  };
+
 
 
   /**
@@ -62,6 +95,7 @@ $(document).ready((ev) => {
     // ...
     studyTabs();
     parallaxAnimation();
+    moduleBtn();
   };
   initJquery();
 });
