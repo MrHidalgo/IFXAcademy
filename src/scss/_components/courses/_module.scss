@@ -1,6 +1,12 @@
 // MODULE :: START
 
 .module {
+  transform: translateY(-450px);
+  @include transition(transform);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+
+
   &__wrapper {
     min-height: 100vh;
   }
@@ -34,6 +40,7 @@
       a {
         padding-left: 10px;
         padding-right: 10px;
+        line-height: 1;
         color: $c-black;
         font-size: 50px;
         font-weight: bold;

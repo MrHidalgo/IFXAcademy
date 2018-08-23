@@ -21,7 +21,7 @@ $(document).ready((ev) => {
 
 
   /**
-   *
+   * @studyTabs
    */
   const studyTabs = () => {
     $("[tabs-link-js]").on("click", (e) => {
@@ -40,7 +40,7 @@ $(document).ready((ev) => {
 
 
   /**
-   *
+   * @parallaxAnimation
    */
   const parallaxAnimation = () => {
     const parallaxImg = document.querySelector("#swiper-slide-bg");
@@ -52,7 +52,7 @@ $(document).ready((ev) => {
 
 
   /**
-   *
+   * @name moduleBtn
    */
   const moduleBtn = () => {
     $("[module-btn-js]").on("click", (e) => {
@@ -96,6 +96,25 @@ $(document).ready((ev) => {
   };
 
 
+  /**
+   * @name animatedModuleContainer
+   */
+  const animatedModuleContainer = () => {
+    _window.on("scroll load", (e) => {
+      let scrollVal = _window.scrollTop(),
+        offsetVal = parseInt(450 - scrollVal);
+
+      const transitionContainer = $("#module");
+
+      if(scrollVal < 451) {
+        transitionContainer.css(
+          "transform" , "translateY(-" + offsetVal + "px)"
+        );
+      }
+    });
+  };
+
+
 
   /**
    * @description Init all method
@@ -111,6 +130,7 @@ $(document).ready((ev) => {
     studyTabs();
     parallaxAnimation();
     moduleBtn();
+    animatedModuleContainer();
   };
   initJquery();
 });
