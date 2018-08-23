@@ -2,12 +2,21 @@
 
 -
   var navItem = [
-    "Our Courses",
-    "How it works",
-    "Contact Us"
+    {
+      href : "courses.html",
+      name: "Our Courses"
+    },
+    {
+      href : "#",
+      name: "How it works"
+    },
+    {
+      href : "#",
+      name: "Contact Us"
+    }
   ];
 
-header#header.header
+header#header.header(class!= contentClassName)
   .container
     .header__wrapper
 
@@ -40,10 +49,10 @@ header#header.header
               each val, idx in navItem
                 li.nav__item
                   a.nav__link(
-                    href="#"
+                    href= navItem[idx].href
                     title=""
                     class=""
-                  )!= val
+                  )!= navItem[idx].name
 
 
         .header__row.header__row-2
