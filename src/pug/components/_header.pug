@@ -23,12 +23,20 @@ header#header.header(class!= contentClassName)
       .header__row.header__row-0
         .logotype
           a(href="/" title="")
-            img.logotype__img.logotype__img--desktop(
-              src="./img/img-logotype.png"
-              srcset="./img/img-logotype@2x.png 2x"
-              alt=""
-              title=""
-             )
+            if(contentClassName === "home")
+              img.logotype__img.logotype__img--desktop(
+                src="./img/img-logotype.png"
+                srcset="./img/img-logotype@2x.png 2x"
+                alt=""
+                title=""
+               )
+            else if (contentClassName === "courses")
+              img.logotype__img.logotype__img--desktop(
+                src="./img/img-logotype--black.png"
+                srcset="./img/img-logotype--black@2x.png 2x"
+                alt=""
+                title=""
+               )
 
           a(href="/" title="")
             img.logotype__img.logotype__img--mobile(

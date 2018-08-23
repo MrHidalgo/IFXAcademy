@@ -13,6 +13,12 @@
     background-color: rgba($c-blackRussian, 0.9);
     @include transition(background-color);
 
+
+    &.courses {
+      background-color: transparent;
+    }
+
+
     .header__wrapper {
       min-height: 70px;
       @include transition(min-height);

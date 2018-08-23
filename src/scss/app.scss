@@ -36,6 +36,8 @@
 @import "_components/header";
 @import "_components/footer";
 
-@import "_components/main";
-@import "_components/level";
-@import "_components/study";
+@import "_components/home/main";
+@import "_components/home/level";
+@import "_components/home/study";
+
+@import "_components/courses/main";

@@ -61,6 +61,13 @@
     }
 
 
+    .courses & {
+      @include respond(medium) {
+        color: $c-black;
+      }
+    }
+
+
     &:hover {
       color: $c-torchRed;
       @include transition(color);
