@@ -1,0 +1,171 @@
+// REGISTER WELCOME :: START
+.welcome {
+    padding: 174px 15px 68px;
+    background: #fff;
+    .container {
+        max-width: 726px;
+        margin: 0 auto;
+    }
+    &__title {
+        margin-bottom: 50px;
+        text-align: left;
+        font-size: 70px;
+        line-height: 70px;
+        font-weight: bold;
+        font-family: "Rajdhani", sans-serif;
+        color: #000000;
+        letter-spacing: -2.92px;
+    }
+    &__sub-title {
+        font-size: 22px;
+        line-height: 26px;
+        opacity: 0.7;
+        color: #000000;
+        text-align: left;
+        margin-bottom: 52px;
+    }
+    a.btn {
+        margin: 50px auto 0 0;
+        font-size: 18px;
+        padding: 15px 15px 14px;
+        max-width: 224px;
+        height: 50px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid rgba(#F30830, 0.2);
+        color: #F30830;
+        &:hover {
+            background: #F30830;
+            border-color: #F30830;
+            color: #fff;
+        }
+    }
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        a {
+            font-family: "Rajdhani", sans-serif;
+            font-size: 32px;
+            line-height: 41px;
+            font-weight: 700;
+            letter-spacing: -1.33px;
+            color: #000;
+        }
+        p {
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+    &__item {
+        width: 50%;
+        text-align: left;
+        &:nth-child(2) {
+            padding-left: 38px;
+        }
+    }
+}
+
+body[data-file=contacts] {
+    .nav__link {
+        color: #000;
+    }
+    .logotype a {
+        background: url(../img/ifx-black.svg) center center no-repeat;
+        display: block;
+    }
+    .logotype__img--desktop {
+        opacity: 0;
+    }
+    header {
+        &.header--fixed {
+            .nav__link {
+                color: #fff;
+            }
+            .logotype a {
+                background: none;
+                display: block;
+            }
+            .logotype__img--desktop {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .welcome__title {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .welcome {
+        padding: 100px 15px 30px;
+        &__title {
+            font-size: 40px;
+            line-height: 1.2;
+            text-align: left;
+            letter-spacing: 0;
+            margin-bottom: 15px;
+        }
+        &__sub-title {
+            text-align: left;
+            letter-spacing: 0;
+            font-size: 16px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            br {
+            	display: none;
+            }
+        }
+        &__grid {
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 100%;
+            margin-bottom: 10px;
+            &:nth-child(2) {
+                padding-left: 0;
+            }
+            a {
+            	font-size: 24px;
+            	line-height: 1.2;
+            }
+            p {
+            	font-size: 14px;
+            	line-height: 1.2;
+            }
+        }
+        a.btn {
+        	margin-top: 25px;
+        	font-size: 16px;
+        	height: 40px;
+        	max-width: 190px;
+        }
+    }
+    body[data-file=contacts] {
+        .header__row-2 .nav__link {
+            color: #13131a;
+        }
+        .nav__link {
+            color: #fff;
+        }
+        .logotype a {
+            background: url(../img/ifx-black.svg) center center no-repeat;
+            display: block;
+            background: none;
+        }
+        .logotype__img--desktop {
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .welcome__title {
+        font-size: 26px;
+    }
+}
+
+// REGISTER WELCOME :: START

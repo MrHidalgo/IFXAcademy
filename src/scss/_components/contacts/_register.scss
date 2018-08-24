@@ -1,0 +1,66 @@
+// REGISTER CONTACTS :: START
+.register {
+    padding: 50px 15px 90px;
+    background: url(../img/register.jpg) center center no-repeat;
+    background-size: cover;
+    border-bottom: 1px;
+    .container {
+        max-width: 726px;
+        margin: 0 auto;
+    }
+    &__title {
+        margin-bottom: 32px;
+        text-align: center;
+        font-size: 40px;
+        line-height: 51px;
+        font-weight: bold;
+        font-family: "Rajdhani", sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: -1.67px;
+    }
+    &__sub-title {
+        font-size: 22px;
+        line-height: 26px;
+        opacity: 0.6;
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 31px;
+    }
+    a.btn {
+        margin: 0 auto;
+        font-size: 18px;
+        padding: 15px 15px 14px;
+        max-width: 180px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .register {
+        padding: 25px 15px 25px;
+        &__title {
+            font-size: 22px;
+            letter-spacing: 0;
+            line-height: 1.2;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        &__sub-title {
+            text-align: left;
+            letter-spacing: 0;
+            font-size: 16px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        a.btn {
+            margin-top: 25px;
+            font-size: 16px;
+            height: 40px;
+            max-width: 150px;
+            margin-left: 0;
+        }
+    }
+}
+
+// REGISTER CONTACTS :: START
