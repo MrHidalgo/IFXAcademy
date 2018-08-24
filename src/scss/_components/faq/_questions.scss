@@ -1,0 +1,40 @@
+.questions {
+    background: #F2F2F2;
+    padding: 30px 15px;
+    .container {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    &__item {
+        padding: 40px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 26px;
+        line-height: 33px;
+        letter-spacing: -1.08px;
+        margin-bottom: 23px;
+    }
+    &__answer {
+        font-size: 18px;
+        line-height: 26px;
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .questions {
+        padding: 20px 15px;
+        &__item {
+            padding: 20px 0;
+        }
+        &__title {
+            margin-bottom: 15px;
+        }
+    }
+}

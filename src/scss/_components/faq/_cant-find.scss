@@ -1,0 +1,58 @@
+// CANT-FIND FAQ :: START
+.cant-find {
+    padding: 143px 15px 123px;
+    background: #F30830;
+    .container {
+        max-width: 726px;
+        margin: 0 auto;
+    }
+    &__title {
+        margin-bottom: 32px;
+        text-align: center;
+        font-size: 50px;
+        line-height: 63px;
+        font-weight: bold;
+        font-family: "Rajdhani", sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        letter-spacing: -2.08px;
+    }
+    a.btn {
+        margin: 0 auto;
+        font-size: 18px;
+        padding: 15px 15px 14px;
+        max-width: 180px;
+        height: 50px;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cant-find {
+        padding: 50px 15px 50px;
+        &__title {
+            font-size: 22px;
+            letter-spacing: 0;
+            line-height: 1.2;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        &__sub-title {
+            text-align: left;
+            letter-spacing: 0;
+            font-size: 16px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        a.btn {
+            margin-top: 25px;
+            font-size: 16px;
+            height: 40px;
+            max-width: 150px;
+            margin-left: 0;
+        }
+    }
+}
+
+// CANT-FIND FAQ :: START

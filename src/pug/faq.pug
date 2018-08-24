@@ -1,0 +1,17 @@
+---
+title: FAQ
+favicon: favicon
+
+contentClassName: home
+dataPageName: contacts
+
+additionalStyleFile: false
+---
+extends shared/_layout
+
+block content
+  div(class!= contentClassName)
+
+    include ./components/faq/_welcome
+    include ./components/faq/_questions
+    include ./components/faq/_cant-find
