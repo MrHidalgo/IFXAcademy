@@ -1,10 +1,7 @@
 // MODULE :: START
 
 .module {
-  transform: translateY(-450px);
-  @include transition(transform);
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
+  position: relative;
 
 
   &__wrapper {

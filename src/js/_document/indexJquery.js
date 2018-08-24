@@ -103,23 +103,17 @@ $(document).ready((ev) => {
    */
   const animatedModuleContainer = () => {
     _window.on("scroll load", (e) => {
+      const parallaxContainer = $("#module"),
+        parallaxDepth = parallaxContainer.data("depth");
+
       let scrollVal = _window.scrollTop(),
-        offsetVal = parseInt(450 - scrollVal);
+        offsetVal = parseInt(450 - (scrollVal * parallaxDepth));
 
-      const transitionContainer = $("#module");
-
-      if(scrollVal < 451) {
-        transitionContainer.css(
-          "transform" , "translateY(-" + offsetVal + "px)"
-        );
-      } else {
-        transitionContainer.css(
-          "transform" , "translateY(0px)"
-        );
-      }
+      parallaxContainer.css(
+        "transform" , "translate3d(0, -" + offsetVal + "px, 0)"
+      );
     });
   };
-
 
 
   /**
