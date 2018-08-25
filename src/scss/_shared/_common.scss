@@ -20,7 +20,7 @@
     li {
       margin-right: 36px;
       @include respond(max-medium) {
-        margin-right: 25px;
+        margin-right: 12px;
       }
       @include respond(max-extra-small) {
         margin-right: 18px;

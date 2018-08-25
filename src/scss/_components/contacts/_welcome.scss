@@ -72,6 +72,9 @@
 body[data-file=contacts] {
     .nav__link {
         color: #000;
+        &:hover {
+            color: #f30830;
+        }
     }
     .logotype a {
         background: url(../img/ifx-black.svg) center center no-repeat;

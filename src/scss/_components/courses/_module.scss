@@ -305,7 +305,8 @@
       overflow: hidden;
       overflow-y: auto;
       display: none;
-      height: calc(625px - 60px);
+      // height: calc(625px - 60px);
+      height: calc(625px - 170px);
       padding: 45px 60px;
       border-radius: 4px;
       background-color: $c-white;

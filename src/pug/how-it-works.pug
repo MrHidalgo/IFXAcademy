@@ -1,0 +1,16 @@
+---
+title: HOW-IT-WORKS
+favicon: favicon
+
+contentClassName: home
+dataPageName: contacts
+
+additionalStyleFile: false
+---
+extends shared/_layout
+
+block content
+	div(class!= contentClassName)
+	
+	include ./components/how-it-works/_h-main
+	include ./components/how-it-works/_trading
