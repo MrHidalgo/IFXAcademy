@@ -3,3 +3,5 @@
 * Include lib:
 *
 * */
+
+initPopups();
