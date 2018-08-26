@@ -63,4 +63,73 @@ footer#footer.footer
       .footer__row.footer__row-1
         p.footer__text!= "IFX Academy (Pty) Ltd (Registration No. 2018|224842|07) is a provider of Forex Education. The information contained in any published learning material solely constitutes an education communication. It does not imply or suggest that it concerns investment advice or recommendations of any form, neither is it an offer of or entreaty for any financial transactions. The information supplied is not aligned with legal requirements endorsing the independence of investment research; furthermore, it is not subject to any prohibition on dealing ahead of the dissemination of investment research. Every opinion expressed is subject to change without prior notice, and opinions should be regarded as entirely those of the writer. These are not necessarily endorsed by IFX Academy. It is forbidden to reproduce or further disseminate the contents of this communication without the written prior consent of IFX Academy."
 
+#submit-question.modal.mfp-hide.mfp-with-anim
+  .modal__head
+    h2.modal__title Submit your question
+    p.modal__sub-title Our professional team will assist you.
+  form(action="#" method="#")
+    .input-container
+      label.inp(for='name')
+        input#name(type='text',  name='name', placeholder=' ')
+        span.label Name
+        span.border
+    .input-container
+      label.inp(for='surname')
+        input#surname(type='text', name='surname', placeholder=' ')
+        span.label Surname
+        span.border
+    .input-container
+      label.inp(for='email')
+        input#email(type='text', name='email', placeholder=' ')
+        span.label Email Address
+        span.border
+    .input-container
+      label.inp(for='cell')
+        input#cell(type='text', name='cellnumber', placeholder=' ')
+        span.label Cell Number
+        span.border
+    .input-container
+      label.inp(for='country')
+        input#country(type='text', name='country', placeholder=' ')
+        span.label Country
+        span.border
+    .input-container
+      label.inp(for='message')
+        input#message(type='text', name='message', placeholder=' ')
+        span.label Message
+        span.border
+    input.nav__btn.btn(type='submit' value='Send message')
+
+#get-started.modal.mfp-hide.mfp-with-anim
+  .modal__head
+    h2.modal__title Register for a free wokrshop
+  form(action="#" method="#")
+    .input-container
+      label.inp(for='name')
+        input#name(type='text',  name='name', placeholder=' ')
+        span.label Name
+        span.border
+    .input-container
+      label.inp(for='surname')
+        input#surname(type='text', name='surname', placeholder=' ')
+        span.label Surname
+        span.border
+    .input-container
+      label.inp(for='email')
+        input#email(type='text', name='email', placeholder=' ')
+        span.label Email Address
+        span.border
+    .input-container
+      label.inp(for='cell')
+        input#cell(type='text', name='cellnumber', placeholder=' ')
+        span.label Cell Number
+        span.border
+    .input-container.input--checkbox
+      input#checkbox1.css-checkbox(type='checkbox', name='checkbox')
+      label.css-label(for='checkbox1') I am not a student
+    .input-container.input--checkbox
+      input#checkbox1.css-checkbox(type='checkbox', name='checkbox')
+      label.css-label(for='checkbox2') I have read and understood the Privacy Policy
+    input.nav__btn.btn(type='submit' value='Book now')
+
 // FOOTER :: END

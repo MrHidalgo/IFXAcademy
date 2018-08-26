@@ -5,4 +5,29 @@
   .modal__body
   .modal__footer
 
+#submit-question.modal.mfp-hide.mfp-with-anim
+	h2.modal__title Submit your question
+	p.modal__sub-title Our professional team will assist you.
+	form(action="#" method="#")
+		.field
+			input#fullname(type='text', name='fullname', placeholder='Name')
+			label(for='fullname') Name
+		.field
+			input#surname(type='text', name='surname', placeholder='Surname')
+			label(for='surname') Surname
+		.field
+			input#email(type='text', name='email', placeholder='Email Address')
+			label(for='email') Email
+		.field
+			input#cell-number(type='text', name='cell-number', placeholder='Cell Number')
+			label(for='cell-number') Cell Number
+		.field
+			input#country(type='text', name='country', placeholder='Country')
+			label(for='country') Country
+		.field
+			input#message(type='text', name='message', placeholder='Mesage')
+			label(for='message') Mesage
+		.field
+			input.nav__btn.btn(type='submit' value='Send message')
+
 // MODAL :: END

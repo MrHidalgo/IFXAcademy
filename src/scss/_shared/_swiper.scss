@@ -71,7 +71,8 @@
 
 
       &-1 {
-        background-image: url('../img/img-main-bg-2.png');
+        // background-image: url('../img/img-main-bg-2.png');
+        background-image: url('../img/img-bg-slide-2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -81,7 +82,17 @@
       }
 
 
+
+
       &-2 {
+        // background-image: url('../img/img-main-bg-2.png');
+        background-image: url('../img/img-bg-slide-3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include respond(max-extra-small) {
+          background-position-x: 70%;
+        }
         .main__title {
           margin-top: -150px;
         }
