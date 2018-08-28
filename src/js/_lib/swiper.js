@@ -14,7 +14,7 @@ function initSwiper() {
     watchOverflow: true,
     normalizeSlideIndex: true,
     grabCursor: false,
-    freeMode: true,
+    freeMode: false,
     speed: 450,
     effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
     slidesPerView: 1,
